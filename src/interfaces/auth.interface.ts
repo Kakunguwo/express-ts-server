@@ -1,0 +1,9 @@
+import { Request, Response } from 'express';
+
+export interface AuthenticatedRequest extends Request {
+    user?: {
+        _id: string;
+        email: string;
+        [key: string]: any;
+    };
+}
